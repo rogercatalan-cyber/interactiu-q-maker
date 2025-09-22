@@ -53,6 +53,7 @@ export default {
           incorrect: "hsl(var(--quiz-incorrect))",
           neutral: "hsl(var(--quiz-neutral))",
           progress: "hsl(var(--quiz-progress))",
+          accent: "hsl(var(--quiz-accent))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -113,11 +114,15 @@ export default {
         "gradient-secondary": "var(--gradient-secondary)",
         "gradient-success": "var(--gradient-success)",
         "gradient-card": "var(--gradient-card)",
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-bg": "var(--gradient-bg)",
       },
       boxShadow: {
         "quiz": "var(--shadow-quiz)",
         "card": "var(--shadow-card)",
         "glow": "var(--shadow-glow)",
+        "success": "var(--shadow-success)",
+        "error": "var(--shadow-error)",
       },
     },
   },

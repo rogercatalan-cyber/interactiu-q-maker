@@ -6,64 +6,71 @@
 
 @layer base {
   :root {
-    /* Brand Colors - Tech-inspired palette */
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    /* Enhanced color palette - more vibrant and engaging */
+    --background: 220 13% 9%;
+    --foreground: 220 13% 98%;
 
-    --card: 240 10% 8%;
-    --card-foreground: 0 0% 95%;
+    --card: 220 13% 11%;
+    --card-foreground: 220 13% 98%;
 
-    --popover: 240 10% 8%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 220 13% 11%;
+    --popover-foreground: 220 13% 98%;
 
-    --primary: 202 100% 50%;
-    --primary-foreground: 240 10% 3.9%;
-    --primary-glow: 202 100% 60%;
+    --primary: 204 94% 56%;
+    --primary-foreground: 220 13% 9%;
+    --primary-glow: 204 94% 66%;
 
-    --secondary: 240 4.8% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 220 15% 20%;
+    --secondary-foreground: 220 13% 98%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 220 13% 18%;
+    --muted-foreground: 220 9% 65%;
 
-    --accent: 142 76% 36%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 142 71% 45%;
+    --accent-foreground: 220 13% 98%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 91% 61%;
+    --destructive-foreground: 220 13% 98%;
 
-    --success: 142 76% 36%;
-    --success-foreground: 0 0% 98%;
+    --success: 142 71% 45%;
+    --success-foreground: 220 13% 98%;
 
     --warning: 38 92% 50%;
-    --warning-foreground: 240 10% 3.9%;
+    --warning-foreground: 220 13% 9%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 202 100% 50%;
+    --border: 220 13% 18%;
+    --input: 220 13% 18%;
+    --ring: 204 94% 56%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Quiz-specific design tokens */
-    --quiz-correct: 142 76% 36%;
-    --quiz-incorrect: 0 72% 51%;
-    --quiz-neutral: 217 32.6% 17.5%;
-    --quiz-progress: 202 100% 50%;
+    /* Enhanced quiz design tokens */
+    --quiz-correct: 142 71% 45%;
+    --quiz-incorrect: 0 91% 61%;
+    --quiz-neutral: 220 15% 20%;
+    --quiz-progress: 204 94% 56%;
+    --quiz-accent: 270 95% 75%;
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(202 100% 50%), hsl(202 100% 60%));
-    --gradient-secondary: linear-gradient(135deg, hsl(240 10% 8%), hsl(240 4.8% 15.9%));
-    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 46%));
-    --gradient-card: linear-gradient(145deg, hsl(240 10% 8% / 0.8), hsl(240 4.8% 15.9% / 0.6));
+    /* Vibrant gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(204 94% 56%), hsl(270 95% 75%));
+    --gradient-secondary: linear-gradient(135deg, hsl(220 13% 11%), hsl(220 15% 20%));
+    --gradient-success: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 71% 55%));
+    --gradient-card: linear-gradient(145deg, hsl(220 13% 11% / 0.95), hsl(220 15% 20% / 0.8));
+    --gradient-hero: linear-gradient(135deg, hsl(204 94% 56%), hsl(270 95% 75%), hsl(142 71% 45%));
+    --gradient-bg: radial-gradient(ellipse at top, hsl(204 94% 56% / 0.1), transparent 50%), 
+                   radial-gradient(ellipse at bottom right, hsl(270 95% 75% / 0.1), transparent 50%);
     
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Enhanced animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-elastic: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     
-    /* Shadows & Effects */
-    --shadow-quiz: 0 10px 30px -10px hsl(202 100% 50% / 0.3);
-    --shadow-card: 0 4px 20px -4px hsl(240 10% 3.9% / 0.5);
-    --shadow-glow: 0 0 40px hsl(202 100% 50% / 0.4);
+    /* Enhanced shadows & effects */
+    --shadow-quiz: 0 20px 40px -10px hsl(204 94% 56% / 0.4);
+    --shadow-card: 0 8px 32px -8px hsl(220 13% 9% / 0.6);
+    --shadow-glow: 0 0 60px hsl(204 94% 56% / 0.5);
+    --shadow-success: 0 0 40px hsl(142 71% 45% / 0.4);
+    --shadow-error: 0 0 40px hsl(0 91% 61% / 0.4);
 
     --sidebar-background: 0 0% 98%;
 
@@ -132,19 +139,32 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    background-image: radial-gradient(circle at 50% 50%, hsl(202 100% 50% / 0.1) 0%, transparent 50%);
+    background: var(--gradient-bg);
+    min-height: 100vh;
+    position: relative;
   }
 
-  /* Quiz-specific animations */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-bg);
+    z-index: -1;
+  }
+
+  /* Enhanced quiz animations */
   @keyframes pulse-success {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.05); opacity: 0.8; }
+    0%, 100% { transform: scale(1); box-shadow: var(--shadow-success); }
+    50% { transform: scale(1.02); box-shadow: var(--shadow-success), var(--shadow-glow); }
   }
 
   @keyframes shake-error {
     0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    75% { transform: translateX(5px); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-8px); }
+    20%, 40%, 60%, 80% { transform: translateX(8px); }
   }
 
   @keyframes progress-fill {
@@ -152,15 +172,76 @@
     100% { width: var(--progress-width); }
   }
 
+  @keyframes float-up {
+    0% { opacity: 0; transform: translateY(30px) scale(0.9); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  @keyframes bounce-in {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: var(--shadow-card); }
+    50% { box-shadow: var(--shadow-glow); }
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
   .animate-pulse-success {
-    animation: pulse-success 0.6s ease-in-out;
+    animation: pulse-success 0.8s ease-in-out;
   }
 
   .animate-shake-error {
-    animation: shake-error 0.4s ease-in-out;
+    animation: shake-error 0.6s ease-in-out;
   }
 
   .animate-progress {
-    animation: progress-fill 0.8s ease-out;
+    animation: progress-fill 1s ease-out;
+  }
+
+  .animate-float-up {
+    animation: float-up 0.6s ease-out;
+  }
+
+  .animate-bounce-in {
+    animation: bounce-in 0.8s ease-out;
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+
+  .animate-gradient-shift {
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  /* Improved button hover effects */
+  .quiz-button {
+    transition: var(--transition-elastic);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .quiz-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.5s;
+  }
+
+  .quiz-button:hover::before {
+    left: 100%;
   }
 }
